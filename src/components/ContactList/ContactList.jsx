@@ -1,9 +1,10 @@
 import { useSelector } from 'react-redux';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { selectFilters } from '../../redux/filters/selectors';
-import { selectContacts } from '../../redux/contacts/selectors';
 import Contact from '../Contact/Contact';
 import css from './ContactList.module.css';
+
+const selectContacts = state => state.contacts.items;
 
 export default function ContactList() {
   const [parent] = useAutoAnimate({ easing: 'linear', duration: 300 });

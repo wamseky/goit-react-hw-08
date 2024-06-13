@@ -58,5 +58,4 @@ const contactsSlice = createSlice({
   },
 });
 
-export const selectContacts = state => state.contacts.items;
 export default contactsSlice.reducer;
